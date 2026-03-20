@@ -1,0 +1,82 @@
+local M = {}
+
+M.colors = {
+    bg = "#282c33",
+    bg_subtle = "#2f343e",
+    bg_alt = "#3b414d",
+    bg_element = "#2e343e",
+    bg_active = "#454a56",
+    bg_hover = "#363c46",
+    bg_selection = "#3e4451",
+    bg_drop_target = "#838994",
+
+    border = "#464b57",
+    border_variant = "#363c46",
+    border_focus = "#47679e",
+    border_selected = "#293b5b",
+    border_disabled = "#414754",
+
+    fg = "#acb2be",
+    fg_bright = "#dce0e5",
+    fg_muted = "#a9afbc",
+    fg_placeholder = "#878a98",
+    fg_disabled = "#878a98",
+    fg_terminal = "#abb2bf",
+    fg_terminal_bright = "#dce0e5",
+    fg_terminal_dim = "#636d83",
+
+    accent = "#74ade8",
+    blue = "#73ade9",
+    blue_term = "#61afef",
+    cyan = "#6eb4bf",
+    cyan_bright = "#56b6c2",
+    green = "#a1c181",
+    green_term = "#98c379",
+    yellow = "#dec184",
+    yellow_term = "#e5c07b",
+    orange = "#bf956a",
+    red = "#d07277",
+    red_term = "#e06c75",
+    purple = "#b477cf",
+    purple_term = "#c678dd",
+
+    comment = "#5d636f",
+    comment_doc = "#878e98",
+    predictive = "#5a6a87",
+    line_nr = "#4e5a5f",
+    line_nr_active = "#d0d4da",
+    line_nr_hover = "#acb0b4",
+
+    black = "#282c34",
+    white = "#abb2bf",
+    bright_white = "#fafafa",
+    bright_black = "#636d83",
+
+    error = "#d07277",
+    error_bg = "#3c3135",
+    warning = "#dec184",
+    warning_bg = "#3d3833",
+    info = "#74ade8",
+    info_bg = "#303a46",
+    hint = "#788ca6",
+    hint_bg = "#313740",
+    success = "#a1c181",
+    success_bg = "#343d38",
+
+    diff_add = "#27a657",
+    diff_delete = "#e06c76",
+    diff_change = "#d3b020",
+    diff_add_bg = "#38482f",
+    diff_delete_bg = "#4c2b2c",
+    diff_change_bg = "#5d4c2f",
+
+    search = "#4c647d",
+    search_current = "#6d5a4b",
+
+    visual = "#3e4451",
+    pmenu = "#2f343e",
+    pmenu_sel = "#454a56",
+    float = "#2f343e",
+}
+
+return M
