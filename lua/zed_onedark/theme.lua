@@ -255,7 +255,7 @@ function M.setup(config)
     hl("SpellRare", { sp = c.purple, undercurl = true })
     hl("SpellLocal", { sp = c.cyan_bright, undercurl = true })
 
-    hl("TelescopeNormal", { fg = c.fg, bg = c.bg_subtle })
+    hl("TelescopeNormal", { fg = c.fg, bg = c.bg })
     hl("TelescopeBorder", { fg = c.border, bg = c.bg_subtle })
     hl("TelescopeTitle", { fg = c.accent, bg = c.bg })
     hl("TelescopePromptNormal", { fg = c.fg, bg = c.bg_hover })
