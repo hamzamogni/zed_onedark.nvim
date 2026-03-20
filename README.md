@@ -21,6 +21,7 @@ Source reference: [zed-industries/zed/assets/themes/one/one.json](https://github
   lazy = false,
   priority = 1000,
   config = function()
+    require("zed_onedark").setup()
     vim.cmd.colorscheme("zed_onedark")
   end,
 }
@@ -32,6 +33,7 @@ Source reference: [zed-industries/zed/assets/themes/one/one.json](https://github
 use({
   "hamzamogni/zed_onedark.nvim",
   config = function()
+    require("zed_onedark").setup()
     vim.cmd.colorscheme("zed_onedark")
   end,
 })
@@ -53,6 +55,25 @@ require("lualine").setup({
 require("zed_onedark").setup()
 vim.cmd.colorscheme("zed_onedark")
 ```
+
+## Highlight overrides
+
+Use `setup()` to override any highlight group before or after calling `:colorscheme`.
+
+```lua
+require("zed_onedark").setup({
+  highlights = {
+    Normal = { bg = "NONE" },
+    Comment = { italic = true },
+    FloatBorder = { fg = "#74ade8" },
+    CursorLineNr = { bold = true },
+  },
+})
+
+vim.cmd.colorscheme("zed_onedark")
+```
+
+Overrides are merged with the theme's default highlight definition, so you only need to specify the fields you want to change.
 
 ## Local development
 

@@ -10,7 +10,28 @@ local function link(group, target)
     hl(group, { link = target })
 end
 
-function M.setup()
+local function merge_highlight(group, opts)
+    if opts.link ~= nil then
+        return opts
+    end
+
+    local ok, current = pcall(vim.api.nvim_get_hl, 0, { name = group, link = false })
+    if not ok then
+        current = {}
+    end
+
+    return vim.tbl_deep_extend("force", current, opts)
+end
+
+local function apply_overrides(overrides)
+    for group, opts in pairs(overrides or {}) do
+        hl(group, merge_highlight(group, opts))
+    end
+end
+
+function M.setup(config)
+    config = config or {}
+
     vim.o.termguicolors = true
     vim.o.background = "dark"
 
@@ -343,6 +364,8 @@ function M.setup()
     hl("RenderMarkdownBullet", { fg = c.red })
     hl("RenderMarkdownQuote", { fg = c.comment_doc })
     hl("RenderMarkdownLink", { fg = c.blue, underline = true })
+
+    apply_overrides(config.highlights)
 end
 
 return M

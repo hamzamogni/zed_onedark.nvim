@@ -1,1 +1,1 @@
-require("zed_onedark").setup()
+require("zed_onedark").load()
